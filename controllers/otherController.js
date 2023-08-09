@@ -10,8 +10,8 @@ export const addToWaitingList = catchAsyncError(async (req, res, next) => {
     return next(new ErrorHandler(`Fill all fields`, 400));
 
   const to = process.env.MY_MAIL;
-  const subject = "Contact from CourseBundler";
-  const text = `I am ${name} and my Email is ${email}. \n ${message}`;
+  const subject = "Contact from ProjectS Landing Page";
+  const text = `My name is ${name} and my Email is ${email}.\nMessage: ${message}`;
 
   await sendEmail(to, subject, text);
 
